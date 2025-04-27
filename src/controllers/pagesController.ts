@@ -1,36 +1,14 @@
 import { Request, Response } from "express";
 import path from "path";
 import fs from "fs";
+import { HTML_OUTPUT_DIR } from "../../constants.js";
 
-const pagesController = {
+const homeController = {
   home: async (req: Request, res: Response<string>) => {
     try {
-      const homePath = path.join(process.cwd(), "public/html/home.html");
-      const carouselPath = path.join(
-        process.cwd(),
-        "public/html/templates/carousel.html"
-      );
-      const headerPath = path.join(
-        process.cwd(),
-        "public/html/templates/header.html"
-      );
-
-      const [homeContent, carouselContent, headerContent] = await Promise.all([
-        fs.promises.readFile(homePath, "utf-8"),
-        fs.promises.readFile(carouselPath, "utf-8"),
-        fs.promises.readFile(headerPath, "utf-8"),
-      ]);
-
-      let updatedHomeContent = homeContent.replace(
-        "<Carousel />",
-        carouselContent
-      );
-      updatedHomeContent = updatedHomeContent.replace(
-        "<CustomHeader />",
-        headerContent
-      );
-
-      res.send(updatedHomeContent);
+      const homePath = path.join(process.cwd(), HTML_OUTPUT_DIR, "/home.html");
+      const homeContent = await fs.promises.readFile(homePath, "utf-8");
+      res.send(homeContent);
     } catch (err) {
       res.status(500).send("An error has occurred while reading the HTML file");
     }
@@ -39,27 +17,18 @@ const pagesController = {
     try {
       const downloadsPath = path.join(
         process.cwd(),
-        "public/html/downloads.html"
+        HTML_OUTPUT_DIR,
+        "/downloads.html"
       );
-      const headerPath = path.join(
-        process.cwd(),
-        "public/html/templates/header.html"
+      const downloadsContent = await fs.promises.readFile(
+        downloadsPath,
+        "utf-8"
       );
-
-      const [downloadsContent, headerContent] = await Promise.all([
-        fs.promises.readFile(downloadsPath, "utf-8"),
-        fs.promises.readFile(headerPath, "utf-8"),
-      ]);
-
-      let updatedDownloadsContent = downloadsContent.replace(
-        "<CustomHeader />",
-        headerContent
-      );
-      res.send(updatedDownloadsContent);
+      res.send(downloadsContent);
     } catch (err) {
       res.status(500).send("An error has occurred while reading the HTML file");
     }
   },
 };
 
-export default pagesController;
+export default homeController;

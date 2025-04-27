@@ -1,3 +1,9 @@
+:root {
+  --custom-green-primary: #041d20;
+  --custom-green-secondary: #052529;
+  --custom-green-tertiary: #064851;
+}
+
 body {
   background-color: #041d20;
   width: 100vw;

@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="../css/carousel.css" />
   </head>
   <body>
-    <CustomHeader />
+    <div class="header">
+  <h3>SHINDOW</h3>
+
+  <ul class="header-items">
+    <a href="/downloads">Downloads</a>
+    <a href="/downloads">Documentation</a>
+    <a href="/downloads">Blog</a>
+    <a href="/downloads">Donations</a>
+  </ul>
+</div>
+
 
     <div class="title-wrapper">
       <h1>The free web graphic user interface</h1>
@@ -44,10 +54,53 @@
 
     <div class="example-wrapper">
       <h2>What can i do with Shindow?</h2>
-      <Carousel />
+      <!-- Image carousel -->
+<div class="carousel-upper">
+  <div class="carousel">
+    <div class="carousel-item">
+      <img src="../gifs/login.gif" alt="login_example.gif" />
+
+      <p>You can login in different ways</p>
     </div>
 
-    {footer}
+    <div class="carousel-item">
+      <img src="../gifs/navigation.gif" alt="navigation_example.gif" />
+
+      <p>You can navigate through directories</p>
+    </div>
+
+    <div class="carousel-item">
+      <img
+        src="../gifs/manageResources.gif"
+        alt="manage_resources_example.gif"
+      />
+
+      <p>You can manage your resources</p>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../gifs/upload.gif" alt="upload_example.gif" />
+
+      <p>You can upload one or multiple resources at once</p>
+    </div>
+  </div>
+
+  <!-- Nav buttons -->
+  <div class="carousel-buttons">
+    <span class="dot" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+  </div>
+</div>
+
+    </div>
+
+    <div class="footer">
+  <a href="mailto:matias.franco289@gmail.com" target="_blank">Contact</a>
+  <a href="https://github.com/MatiasFranco289" target="_blank">Github</a>
+</div>
+
 
     <script src="../scripts/carousel.js"></script>
   </body>

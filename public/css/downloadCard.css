@@ -35,6 +35,11 @@
   margin-bottom: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 1280px) {
   .download-card-main {
     width: 600px;

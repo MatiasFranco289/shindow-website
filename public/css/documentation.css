@@ -1,0 +1,23 @@
+.main-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--custom-green-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-wrapper {
+  width: 1000px;
+}
+
+.text-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  margin: 0.6rem;
+}

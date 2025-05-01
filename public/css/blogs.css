@@ -1,0 +1,26 @@
+.main-wrapper {
+  width: 100%;
+  background-color: var(--custom-green-secondary);
+  display: flex;
+  justify-content: center;
+}
+
+.blog-wrapper {
+  width: 800px;
+  max-height: 200vh;
+  overflow-y: scroll;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+@media (max-width: 1024px) {
+  .blog-wrapper {
+    width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-wrapper {
+    width: 80%;
+  }
+}

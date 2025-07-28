@@ -1,0 +1,11 @@
+docker run -d -p 61342:5000 \
+-e API_PORT=5000 \
+-e TZ="America/Argentina/Buenos_Aires" \
+-e SERVER_IP="1.1.1.1" \
+-e SERVER_PORT="22" \
+-e SECRET="my-secret" \
+-e SESSION_MAX_AGE=86400000 \
+-e CLIENT_DOMAIN="http://localhost:52087" \
+-e NODE_ENV="production" \
+--name backend-shindow \
+matiasfranco289/backend-shindow:latest

@@ -1,5 +1,5 @@
 "use client";
-import CodeBlock from "@/components/CodeBlock";
+import CodeBlock from "../../components/CodeBlock";
 import { useEffect, useState } from "react";
 import { getDocument } from "../../../utils";
 

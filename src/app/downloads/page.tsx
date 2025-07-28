@@ -1,5 +1,5 @@
 "use client";
-import DownloadCard from "@/components/DownloadCard";
+import DownloadCard from "../../components/DownloadCard";
 import appVersions from "../../../public/documents/appVersions";
 
 export default function Downloads() {

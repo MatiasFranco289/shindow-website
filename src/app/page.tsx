@@ -1,6 +1,6 @@
 "use client";
-import CustomButton from "@/components/CustomButton";
-import ImageCarousel from "@/components/ImageCarousel";
+import CustomButton from "../components/CustomButton";
+import ImageCarousel from "../components/ImageCarousel";
 import { useRouter } from "next/navigation";
 
 export default function Home() {

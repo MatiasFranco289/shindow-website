@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <div className="bg-custom-green-50 p-4 flex justify-center sm:justify-between items-center flex-wrap flex-col-reverse sm:flex-row border-t">
       <div className="mt-3 sm:mt-0">
-        <p className="text-gray-400 sm:text-white">© 2025 Deshens</p>
+        <p className="text-gray-400 sm:text-white">© 2025 mfranco289</p>
       </div>
 
       <div className="flex space-x-4">

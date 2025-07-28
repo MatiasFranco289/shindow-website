@@ -1,0 +1,15 @@
+- API_PORT: Port where the API server runs.
+
+- TZ: Server timezone.
+
+- SERVER_IP: Target server IP for SSH.
+
+- SERVER_PORT: SSH port (default: 22).
+
+- SECRET: Secret key for secure communication.
+
+- SESSION_MAX_AGE: Session expiration time in ms.
+
+- CLIENT_DOMAIN: Frontend domain for CORS.
+
+- NODE_ENV: Environment (production/development).

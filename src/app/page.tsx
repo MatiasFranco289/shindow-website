@@ -7,7 +7,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="w-full bg-gradient-to-t from-custom-green-50 to-custom-green-150 font-roboto overflow-hidden">
+    <div className="w-full bg-gradient-to-t from-custom-green-50 to-custom-green-150 font-roboto overflow-hidden min-h-screen">
       <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-8 px-4 py-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-center">
           The free web graphic user interface

@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  backend:
+    image: matiasfranco289/backend-shindow:latest
+    container_name: backend-shindow
+    ports:
+      - "61342:5000"
+    environment:
+      API_PORT: 5000
+      TZ: "America/Argentina/Buenos_Aires"
+      SERVER_IP: "1.1.1.1"
+      SERVER_PORT: "22"
+      SECRET: "my-secret"
+      SESSION_MAX_AGE: 86400000
+      CLIENT_DOMAIN: "http://localhost:52087"
+      NODE_ENV: "production"
+
+  frontend:
+    image: matiasfranco289/frontend-shindow:latest
+    container_name: frontend-shindow
+    ports:
+      - "52087:3000"
+    environment:
+      NEXT_PUBLIC_SECRET: "my-secret"
+      NEXT_PUBLIC_KEY_FILE_MAX_SIZE: 10024
+      NEXT_PUBLIC_TZ: "America/Argentina/Buenos_Aires"
+      NEXT_PUBLIC_BACK_BASE_URL: "http://localhost:61342"
+      NEXT_PUBLIC_API_BASE_URL: "http://localhost:61342/api"
+      NEXT_PUBLIC_INITIAL_PATH: "/"
+      NEXT_PUBLIC_CLIENT_BASE_URL: "http://localhost:52087"
+    depends_on:
+      - backend

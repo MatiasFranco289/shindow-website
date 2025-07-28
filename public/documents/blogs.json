@@ -1,0 +1,18 @@
+[
+  {
+    "title": "We are on production morty!",
+    "author": "mfranco289",
+    "author_pfp": "/images/profile_photo.png",
+    "date": "27/07/2025",
+    "paragraphs": [
+      "I'm glad to say that today the first production version of Shindow will be released.",
+      "This started as a small project aimed at solving a specific problem. I have a Debian server running on an old laptop that I use to store photos, music, and other things. For me, with some experience as a developer, it's not hard to upload files to this server using the terminal, but I wanted my friends to be able to do it easily too — even if they had no experience or were using other operating systems.",
+      "That's how Shindow was born: on one hand, an API that handles the SSH connection with the server, and on the other, a user-friendly client that consumes the API's exposed endpoints. Everything is packaged in Docker so it can be used without much configuration and regardless of the environment.",
+      "This was supposed to be a small project, but it ended up growing quite a bit. Many features were added that weren’t originally planned, but at the same time, some of the intended ones had to be left out.",
+      "The original idea of separating the client and the API was to eliminate the need to run both containers on the same machine, but this had to be put aside because it would require a major refactor (though I don't rule out adding this functionality in the future).",
+      "Many other features were also left out, such as the ability to download files in addition to uploading them, uploading entire folders, search functionality, selecting multiple files using the mouse, and viewing media files like images or videos directly from Shindow.",
+      "All of that was set aside, and I believe it was the right decision in order for the project to see the light of day, you have to realistic about these thing after all. So today, I'm happy to have a first usable version of Shindow.",
+      "I'll continue working on this project in my spare time, fixing bugs and adding new features."
+    ]
+  }
+]

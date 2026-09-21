@@ -5,15 +5,16 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
 
-  const BLOG = "/blog";
+  /* const BLOG = "/blog"; */
   const DOWNLOADS = "/downloads";
   const SETUP = "/setup";
+  const HOME = "/";
 
   return (
     <nav className="w-full bg-custom-green-50 flex justify-between p-4 items-center sm:flex-row flex-col font-roboto">
-      <div>
+      <Link href={HOME}>
         <h2 className="text-xl font-bold">SHINDOW</h2>
-      </div>
+      </Link>
 
       <ul className="flex space-x-6 sm:mt-0 mt-2 flex-wrap">
         <Link
@@ -27,7 +28,7 @@ export default function Header() {
           Downloads
         </Link>
 
-        <Link
+        {/*  <Link
           href={"/blog"}
           className={`${
             pathname === BLOG
@@ -36,7 +37,7 @@ export default function Header() {
           }`}
         >
           Blog
-        </Link>
+        </Link> */}
 
         <Link
           href={"/setup"}
